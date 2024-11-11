@@ -11,6 +11,8 @@
 		304837E92CE2553400200EC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837E82CE2553400200EC6 /* ContentView.swift */; };
 		304837EB2CE2553400200EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837EA2CE2553400200EC6 /* Assets.xcassets */; };
 		304837EE2CE2553400200EC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837ED2CE2553400200EC6 /* Preview Assets.xcassets */; };
+		304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */; };
+		304837FB2CE25B1D00200EC6 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837FA2CE25B1D00200EC6 /* CoreDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		304837E82CE2553400200EC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		304837EA2CE2553400200EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		304837ED2CE2553400200EC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeeDataSourceProtocol.swift; sourceTree = "<group>"; };
+		304837FA2CE25B1D00200EC6 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		304837F72CE257AB00200EC6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */,
+				304837FA2CE25B1D00200EC6 /* CoreDataService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				304837E92CE2553400200EC6 /* ContentView.swift in Sources */,
+				304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */,
+				304837FB2CE25B1D00200EC6 /* CoreDataService.swift in Sources */,
 				304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
