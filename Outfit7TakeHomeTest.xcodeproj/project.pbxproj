@@ -107,8 +107,8 @@
 		304837F72CE257AB00200EC6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */,
 				304837FA2CE25B1D00200EC6 /* CoreDataService.swift */,
+				304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */,
 				304837FC2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld */,
 			);
 			path = Data;
