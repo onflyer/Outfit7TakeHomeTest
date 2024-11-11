@@ -9,6 +9,6 @@ import Foundation
 
 extension EmployeeCoreDataEntity {
     func toDomain() -> EmployeeDomainModel {
-        return EmployeeDomainModel(id: UUID(), name: "", lastName: "", age: 1, gender: .female)
+        return EmployeeDomainModel(id: id, name: name, lastName: lastName, age: age, gender: Gender(rawValue: gender) ?? .unknown)
     }
 }

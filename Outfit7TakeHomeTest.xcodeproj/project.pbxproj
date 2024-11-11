@@ -113,9 +113,9 @@
 		304837F72CE257AB00200EC6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3099CDAF2CE2AF0400A84F61 /* DTOModels */,
 				3099CDAA2CE26B2900A84F61 /* Mappers */,
 				3099CDA92CE265E400A84F61 /* Local */,
-				3099CDAD2CE26D6700A84F61 /* DTOModels.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -137,6 +137,14 @@
 				3099CDAB2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift */,
 			);
 			path = Mappers;
+			sourceTree = "<group>";
+		};
+		3099CDAF2CE2AF0400A84F61 /* DTOModels */ = {
+			isa = PBXGroup;
+			children = (
+				3099CDAD2CE26D6700A84F61 /* DTOModels.swift */,
+			);
+			path = DTOModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
