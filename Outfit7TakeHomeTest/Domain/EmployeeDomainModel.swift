@@ -9,7 +9,7 @@ import Foundation
 
 struct EmployeeDomainModel: Identifiable {
     
-    let id: String
+    let id: UUID
     let name: String
     let lastName: String
     let age: Int

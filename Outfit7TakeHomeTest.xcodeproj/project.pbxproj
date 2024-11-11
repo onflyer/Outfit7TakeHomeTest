@@ -16,6 +16,9 @@
 		304837FE2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 304837FC2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld */; };
 		3099CDA42CE25F4D00A84F61 /* EmployeeDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDA32CE25F4D00A84F61 /* EmployeeDomainModel.swift */; };
 		3099CDA62CE261DF00A84F61 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDA52CE261DF00A84F61 /* GenderModel.swift */; };
+		3099CDA82CE265D500A84F61 /* LocalEmployeeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDA72CE265D500A84F61 /* LocalEmployeeDataSource.swift */; };
+		3099CDAC2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDAB2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift */; };
+		3099CDAE2CE26D6700A84F61 /* DTOModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDAD2CE26D6700A84F61 /* DTOModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		304837FD2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		3099CDA32CE25F4D00A84F61 /* EmployeeDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDomainModel.swift; sourceTree = "<group>"; };
 		3099CDA52CE261DF00A84F61 /* GenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
+		3099CDA72CE265D500A84F61 /* LocalEmployeeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeeDataSource.swift; sourceTree = "<group>"; };
+		3099CDAB2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCoreDataEntityMapper.swift; sourceTree = "<group>"; };
+		3099CDAD2CE26D6700A84F61 /* DTOModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +113,30 @@
 		304837F72CE257AB00200EC6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3099CDAA2CE26B2900A84F61 /* Mappers */,
+				3099CDA92CE265E400A84F61 /* Local */,
+				3099CDAD2CE26D6700A84F61 /* DTOModels.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3099CDA92CE265E400A84F61 /* Local */ = {
+			isa = PBXGroup;
+			children = (
 				304837FA2CE25B1D00200EC6 /* CoreDataService.swift */,
+				3099CDA72CE265D500A84F61 /* LocalEmployeeDataSource.swift */,
 				304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */,
 				304837FC2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld */,
 			);
-			path = Data;
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3099CDAA2CE26B2900A84F61 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				3099CDAB2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +214,10 @@
 				304837FB2CE25B1D00200EC6 /* CoreDataService.swift in Sources */,
 				3099CDA42CE25F4D00A84F61 /* EmployeeDomainModel.swift in Sources */,
 				304837FE2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld in Sources */,
+				3099CDAE2CE26D6700A84F61 /* DTOModels.swift in Sources */,
 				304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */,
+				3099CDA82CE265D500A84F61 /* LocalEmployeeDataSource.swift in Sources */,
+				3099CDAC2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift in Sources */,
 				3099CDA62CE261DF00A84F61 /* GenderModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,8 +432,7 @@
 				304837FD2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodel */,
 			);
 			currentVersion = 304837FD2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodel */;
-			name = EmployeeCoreDataModel.xcdatamodeld;
-			path = /Users/aleksandarmilidrag/Desktop/Outfit7TakeHomeTest/Outfit7TakeHomeTest/Data/EmployeeCoreDataModel.xcdatamodeld;
+			path = EmployeeCoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
