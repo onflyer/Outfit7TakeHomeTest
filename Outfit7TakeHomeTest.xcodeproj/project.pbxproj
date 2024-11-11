@@ -13,6 +13,7 @@
 		304837EE2CE2553400200EC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837ED2CE2553400200EC6 /* Preview Assets.xcassets */; };
 		304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */; };
 		304837FB2CE25B1D00200EC6 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837FA2CE25B1D00200EC6 /* CoreDataService.swift */; };
+		304837FE2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 304837FC2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		304837ED2CE2553400200EC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeeDataSourceProtocol.swift; sourceTree = "<group>"; };
 		304837FA2CE25B1D00200EC6 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		304837FD2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */,
 				304837FA2CE25B1D00200EC6 /* CoreDataService.swift */,
+				304837FC2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				304837E92CE2553400200EC6 /* ContentView.swift in Sources */,
 				304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */,
 				304837FB2CE25B1D00200EC6 /* CoreDataService.swift in Sources */,
+				304837FE2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld in Sources */,
 				304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +388,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		304837FC2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				304837FD2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 304837FD2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodel */;
+			name = EmployeeCoreDataModel.xcdatamodeld;
+			path = /Users/aleksandarmilidrag/Desktop/Outfit7TakeHomeTest/Outfit7TakeHomeTest/Data/EmployeeCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 304837DB2CE2553400200EC6 /* Project object */;
 }
