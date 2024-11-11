@@ -51,8 +51,10 @@
 		304837E52CE2553400200EC6 /* Outfit7TakeHomeTest */ = {
 			isa = PBXGroup;
 			children = (
-				304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */,
-				304837E82CE2553400200EC6 /* ContentView.swift */,
+				304837F42CE2575E00200EC6 /* App */,
+				304837F52CE2576D00200EC6 /* Presentation */,
+				304837F62CE2579A00200EC6 /* Domain */,
+				304837F72CE257AB00200EC6 /* Data */,
 				304837EA2CE2553400200EC6 /* Assets.xcassets */,
 				304837EC2CE2553400200EC6 /* Preview Content */,
 			);
@@ -65,6 +67,36 @@
 				304837ED2CE2553400200EC6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		304837F42CE2575E00200EC6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		304837F52CE2576D00200EC6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				304837E82CE2553400200EC6 /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		304837F62CE2579A00200EC6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		304837F72CE257AB00200EC6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
