@@ -46,7 +46,7 @@ class LocalEmployeeDataSource {
         coreDataService.saveContext()
     }
     
-    func updateEmployee(employee: EmployeeDomainModel) async throws {
+    func updateEmployee(employee: EmployeeDomainModel) throws {
         let fetchRequest = EmployeeCoreDataEntity.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@", employee.id as CVarArg)
         let result = try managedObjectContext.fetch(fetchRequest)

@@ -20,6 +20,7 @@
 		3099CDAC2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDAB2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift */; };
 		3099CDAE2CE26D6700A84F61 /* EmployeeCoreDataEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDAD2CE26D6700A84F61 /* EmployeeCoreDataEntity+Extension.swift */; };
 		3099CDB12CE2AF9D00A84F61 /* EmployeeDomainModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDB02CE2AF9D00A84F61 /* EmployeeDomainModel+Extension.swift */; };
+		3099CDB42CE2B82500A84F61 /* EmployeesLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDB32CE2B82500A84F61 /* EmployeesLocalRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3099CDAB2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCoreDataEntityMapper.swift; sourceTree = "<group>"; };
 		3099CDAD2CE26D6700A84F61 /* EmployeeCoreDataEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeCoreDataEntity+Extension.swift"; sourceTree = "<group>"; };
 		3099CDB02CE2AF9D00A84F61 /* EmployeeDomainModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeDomainModel+Extension.swift"; sourceTree = "<group>"; };
+		3099CDB32CE2B82500A84F61 /* EmployeesLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesLocalRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +108,7 @@
 		304837F62CE2579A00200EC6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				3099CDA32CE25F4D00A84F61 /* EmployeeDomainModel.swift */,
-				3099CDA52CE261DF00A84F61 /* GenderModel.swift */,
+				3099CDB52CE2BE5A00A84F61 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -115,6 +116,7 @@
 		304837F72CE257AB00200EC6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3099CDB22CE2B7FC00A84F61 /* Repository */,
 				3099CDAF2CE2AF0400A84F61 /* DTOModels */,
 				3099CDAA2CE26B2900A84F61 /* Mappers */,
 				3099CDA92CE265E400A84F61 /* Local */,
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3099CDAB2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift */,
+				3099CDB02CE2AF9D00A84F61 /* EmployeeDomainModel+Extension.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -145,9 +148,25 @@
 			isa = PBXGroup;
 			children = (
 				3099CDAD2CE26D6700A84F61 /* EmployeeCoreDataEntity+Extension.swift */,
-				3099CDB02CE2AF9D00A84F61 /* EmployeeDomainModel+Extension.swift */,
 			);
 			path = DTOModels;
+			sourceTree = "<group>";
+		};
+		3099CDB22CE2B7FC00A84F61 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3099CDB32CE2B82500A84F61 /* EmployeesLocalRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		3099CDB52CE2BE5A00A84F61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3099CDA32CE25F4D00A84F61 /* EmployeeDomainModel.swift */,
+				3099CDA52CE261DF00A84F61 /* GenderModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +250,7 @@
 				3099CDA82CE265D500A84F61 /* LocalEmployeeDataSource.swift in Sources */,
 				3099CDAC2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift in Sources */,
 				3099CDA62CE261DF00A84F61 /* GenderModel.swift in Sources */,
+				3099CDB42CE2B82500A84F61 /* EmployeesLocalRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
