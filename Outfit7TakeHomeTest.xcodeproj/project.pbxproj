@@ -14,6 +14,8 @@
 		304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */; };
 		304837FB2CE25B1D00200EC6 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837FA2CE25B1D00200EC6 /* CoreDataService.swift */; };
 		304837FE2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 304837FC2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld */; };
+		3099CDA42CE25F4D00A84F61 /* EmployeeDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDA32CE25F4D00A84F61 /* EmployeeDomainModel.swift */; };
+		3099CDA62CE261DF00A84F61 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDA52CE261DF00A84F61 /* GenderModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeeDataSourceProtocol.swift; sourceTree = "<group>"; };
 		304837FA2CE25B1D00200EC6 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		304837FD2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		3099CDA32CE25F4D00A84F61 /* EmployeeDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDomainModel.swift; sourceTree = "<group>"; };
+		3099CDA52CE261DF00A84F61 /* GenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		304837F62CE2579A00200EC6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3099CDA32CE25F4D00A84F61 /* EmployeeDomainModel.swift */,
+				3099CDA52CE261DF00A84F61 /* GenderModel.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -181,8 +187,10 @@
 				304837E92CE2553400200EC6 /* ContentView.swift in Sources */,
 				304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */,
 				304837FB2CE25B1D00200EC6 /* CoreDataService.swift in Sources */,
+				3099CDA42CE25F4D00A84F61 /* EmployeeDomainModel.swift in Sources */,
 				304837FE2CE25C4E00200EC6 /* EmployeeCoreDataModel.xcdatamodeld in Sources */,
 				304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */,
+				3099CDA62CE261DF00A84F61 /* GenderModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="CoreDataEmployeEntity" representedClassName="CoreDataEmployeEntity" syncable="YES">
+    <entity name="EmployeeCoreDataEntity" representedClassName="EmployeeCoreDataEntity" syncable="YES" codeGenerationType="class">
         <attribute name="age" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="gender_" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="lastName_" optional="YES" attributeType="String"/>
         <attribute name="name_" optional="YES" attributeType="String"/>
