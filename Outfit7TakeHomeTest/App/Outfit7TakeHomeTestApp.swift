@@ -11,7 +11,7 @@ import SwiftUI
 struct Outfit7TakeHomeTestApp: App {
     var body: some Scene { 
         WindowGroup {
-            ContentView()
+            ContentView() 
         }
     }
 }
