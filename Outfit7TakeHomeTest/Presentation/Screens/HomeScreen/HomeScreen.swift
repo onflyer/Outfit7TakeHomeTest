@@ -16,7 +16,7 @@ struct HomeScreen: View {
             List {
                 ForEach(viewModel.employees) { employee in
                     NavigationLink {
-                        
+                        DetailScreen(employee: employee)
                     } label: {
                         Text(employee.name)
                     }
