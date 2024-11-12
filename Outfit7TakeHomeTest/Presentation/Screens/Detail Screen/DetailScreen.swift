@@ -13,7 +13,12 @@ struct DetailScreen: View {
     
     var body: some View {
         VStack {
-            
+            Image(systemName: "person.crop.circle")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200)
+                .padding(.top, 30)
+            Spacer()
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
