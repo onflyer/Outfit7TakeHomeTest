@@ -10,25 +10,35 @@ import SwiftUI
 struct DetailScreen: View {
     
     let employee: EmployeeDomainModel
-    @State private var name: String = ""
     
     var body: some View {
         VStack {
             ZStack {
-               
-                Image(systemName: "person.crop.circle")
-                    .resizable()
-                    .scaledToFit()
-                    
-                   
-                .padding(40)
+                VStack {
+                    Image(systemName: "person.crop.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(30)
+                    HStack {
+                        Text(employee.name)
+                        Text(employee.lastName)
+                    }
+                    .font(.largeTitle)
+                }
             }
             .frame(width: .infinity, height: 300)
             Spacer()
             Form(content: {
                 Section("Personal info") {
-                    TextField("Enter name", text: $name)
+                    VStack(alignment: .leading) {
+                        Text("Age")
+                            .font(.footnote)
+                        Text("\(employee.age)")
+                    }
+                    
+                    
                 }
+
                 
             })
         }
@@ -45,5 +55,5 @@ struct DetailScreen: View {
 }
 
 #Preview {
-    DetailScreen(employee: EmployeeDomainModel(id: UUID(), name: "PreviewName", lastName: "PreviewLastName", age: 21, gender: .male))
+    DetailScreen(employee: EmployeeDomainModel(id: UUID(), name: "Aleksandar", lastName: "Milidrag", age: 21, gender: .male))
 }
