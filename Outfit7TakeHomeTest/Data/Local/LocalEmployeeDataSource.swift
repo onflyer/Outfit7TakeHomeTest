@@ -40,7 +40,7 @@ class LocalEmployeeDataSource {
     
     func removeEmployee(employee: EmployeeDomainModel) async throws {
         let fetchRequest = EmployeeCoreDataEntity.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id == %@", employee.id as CVarArg)
+        fetchRequest.predicate = NSPredicate(format: "id_ == %@", employee.id as CVarArg)
         let results = try managedObjectContext.fetch(fetchRequest)
         results.forEach { managedObjectContext.delete($0) }
         coreDataService.saveContext()
@@ -48,7 +48,7 @@ class LocalEmployeeDataSource {
     
     func updateEmployee(employee: EmployeeDomainModel) throws {
         let fetchRequest = EmployeeCoreDataEntity.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id == %@", employee.id as CVarArg)
+        fetchRequest.predicate = NSPredicate(format: "id_ == %@", employee.id as CVarArg)
         let result = try managedObjectContext.fetch(fetchRequest)
         result.forEach { oldEmployee in
             oldEmployee.name = employee.name
