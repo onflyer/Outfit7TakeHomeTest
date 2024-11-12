@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class HomeScreenViewModel: ObservableObject {
     
     @Published var state: ViewState = .idle

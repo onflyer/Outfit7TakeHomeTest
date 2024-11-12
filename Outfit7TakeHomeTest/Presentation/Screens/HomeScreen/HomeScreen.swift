@@ -9,11 +9,37 @@ import SwiftUI
 
 struct HomeScreen: View {
     @StateObject var viewModel: HomeScreenViewModel
+    @State var isShowingSheet: Bool = false
     
     var body: some View {
         NavigationStack {
-            Text("")
-                .navigationTitle("Employees")
+            List {
+                ForEach(viewModel.employees) { employee in
+                    NavigationLink {
+                        
+                    } label: {
+                        Text(employee.name)
+                    }
+
+                }
+            }
+            .navigationTitle("Employees")
+            .toolbar(content: {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        isShowingSheet.toggle()
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
+            })
+            .sheet(isPresented: $isShowingSheet, content: {
+                
+            })
+        }
+        
+        .task {
+            await viewModel.fetchEmployees()
         }
         
     }
