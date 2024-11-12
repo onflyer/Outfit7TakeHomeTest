@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */; };
-		304837E92CE2553400200EC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837E82CE2553400200EC6 /* ContentView.swift */; };
 		304837EB2CE2553400200EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837EA2CE2553400200EC6 /* Assets.xcassets */; };
 		304837EE2CE2553400200EC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837ED2CE2553400200EC6 /* Preview Assets.xcassets */; };
 		304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		304837E32CE2553400200EC6 /* Outfit7TakeHomeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outfit7TakeHomeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit7TakeHomeTestApp.swift; sourceTree = "<group>"; };
-		304837E82CE2553400200EC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		304837EA2CE2553400200EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		304837ED2CE2553400200EC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		304837F82CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeeDataSourceProtocol.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				3099CDB82CE3581E00A84F61 /* Screens */,
-				304837E82CE2553400200EC6 /* ContentView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304837E92CE2553400200EC6 /* ContentView.swift in Sources */,
 				304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */,
 				3099CDC02CE3591900A84F61 /* ViewState.swift in Sources */,
 				3099CDBD2CE3586C00A84F61 /* HomeScreen.swift in Sources */,

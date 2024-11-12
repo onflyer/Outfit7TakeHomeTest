@@ -9,20 +9,20 @@ import Foundation
 
 class EmployeesLocalRepository {
     
-    let repository: LocalEmployeeDataSource
+    let dataSource: LocalEmployeeDataSource
     
-    init(repository: LocalEmployeeDataSource) {
-        self.repository = repository
+    init(dataSource: LocalEmployeeDataSource) {
+        self.dataSource = dataSource
     }
     
     func getEmployees() async throws -> [EmployeeDomainModel] {
-        let result = try await repository.getEmployees()
+        let result = try await dataSource.getEmployees()
         return result
     }
     
-    func addEmployee(employee: EmployeeDomainModel) async {
+    func addEmployee(employee: EmployeeDomainModel) async throws {
         do {
-            try await repository.addEmployee(employee: employee)
+            try await dataSource.addEmployee(employee: employee)
         } catch {
             print("Local DS: \(error.localizedDescription)")
         }
@@ -30,7 +30,7 @@ class EmployeesLocalRepository {
     
     func removeEmployee(employee: EmployeeDomainModel) async {
         do {
-            try await repository.removeEmployee(employee: employee)
+            try await dataSource.removeEmployee(employee: employee)
         } catch {
             print("Local DS: \(error.localizedDescription)")
         }
@@ -38,7 +38,7 @@ class EmployeesLocalRepository {
     
     func updateEmployee(employee: EmployeeDomainModel) async {
         do {
-            try repository.updateEmployee(employee: employee)
+            try dataSource.updateEmployee(employee: employee)
         } catch {
             print("Local DS: \(error.localizedDescription)")
         }

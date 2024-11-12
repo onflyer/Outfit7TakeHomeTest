@@ -8,7 +8,8 @@
 import Foundation
 import CoreData
 
-open class CoreDataService {
+class CoreDataService {
+    
     public static let modelName = "EmployeeCoreDataModel"
     public static let model: NSManagedObjectModel = {
         let modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd")!

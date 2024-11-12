@@ -18,3 +18,31 @@ class HomeScreenViewModel: ObservableObject {
         self.repository = repository
     }
 }
+
+extension HomeScreenViewModel {
+    
+    func fetchEmployees() async {
+        do {
+            state = .loading
+            let result = try await repository.getEmployees()
+            employees = result
+            if employees.isEmpty {
+                state = .empty
+            } else {
+                state = .success
+            }
+        } catch  {
+            print(error)
+            state = .error(error.localizedDescription)
+        }
+    }
+    
+    func addEmployee(employee: EmployeeDomainModel) async {
+        let employee = EmployeeDomainModel(id: UUID(), name: employee.name, lastName: employee.lastName, age: employee.age, gender: employee.gender)
+        do {
+            try await repository.addEmployee(employee: employee)
+        } catch {
+            print(error)
+        }
+    }
+}
