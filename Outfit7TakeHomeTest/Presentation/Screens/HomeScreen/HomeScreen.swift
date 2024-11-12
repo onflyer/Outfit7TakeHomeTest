@@ -21,6 +21,7 @@ struct HomeScreen: View {
                         Text(employee.name)
                     }
 
+
                 }
             }
             .navigationTitle("Employees")

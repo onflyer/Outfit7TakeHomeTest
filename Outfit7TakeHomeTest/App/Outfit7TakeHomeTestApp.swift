@@ -12,7 +12,7 @@ struct Outfit7TakeHomeTestApp: App {
     
 //    static func main() async {
 //        let instance = EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))
-//        let employee = EmployeeDomainModel(id: UUID(uuidString: "7ACD09D1-CA1D-4C41-BB05-279CF7D52FF2")!, name: "test3", lastName: "test3", age: 33, gender: .unknown)
+//        let employee = EmployeeDomainModel(id: UUID(), name: "test3", lastName: "test3", age: 33, gender: .unknown)
 //        do {
 //            try await instance.dataSource.addEmployee(employee: employee)
 //        } catch {
