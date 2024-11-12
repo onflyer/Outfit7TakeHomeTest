@@ -18,6 +18,7 @@ struct DetailScreen: View {
                     Image(systemName: "person.crop.circle.fill")
                         .resizable()
                         .scaledToFit()
+                        .foregroundStyle(.tertiary)
                         .padding(30)
                     HStack {
                         Text(employee.name)
@@ -26,7 +27,7 @@ struct DetailScreen: View {
                     .font(.largeTitle)
                 }
             }
-            .frame(width: .infinity, height: 300)
+            .frame(maxWidth: .infinity, maxHeight: 300)
             Spacer()
             Form(content: {
                 Section("Personal info") {
@@ -35,11 +36,12 @@ struct DetailScreen: View {
                             .font(.footnote)
                         Text("\(employee.age)")
                     }
-                    
-                    
+                    VStack(alignment: .leading) {
+                        Text("Gender")
+                            .font(.footnote)
+                        Text("\(employee.gender.rawValue)")
+                    }
                 }
-
-                
             })
         }
         .toolbar {

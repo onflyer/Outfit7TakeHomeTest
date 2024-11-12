@@ -24,6 +24,7 @@
 		3099CDBD2CE3586C00A84F61 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDBC2CE3586C00A84F61 /* HomeScreen.swift */; };
 		3099CDC02CE3591900A84F61 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDBF2CE3591900A84F61 /* ViewState.swift */; };
 		3099CDC32CE3FB5200A84F61 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDC22CE3FB5200A84F61 /* DetailScreen.swift */; };
+		3099CDC62CE4106300A84F61 /* AddEmployeeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099CDC52CE4106300A84F61 /* AddEmployeeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		3099CDBC2CE3586C00A84F61 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3099CDBF2CE3591900A84F61 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		3099CDC22CE3FB5200A84F61 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		3099CDC52CE4106300A84F61 /* AddEmployeeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +181,8 @@
 		3099CDB82CE3581E00A84F61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				3099CDC12CE3FB3400A84F61 /* Detail Screen */,
+				3099CDC42CE4100C00A84F61 /* AddEmployeeScreen */,
+				3099CDC12CE3FB3400A84F61 /* DetailScreen */,
 				3099CDB92CE3583200A84F61 /* HomeScreen */,
 			);
 			path = Screens;
@@ -202,12 +205,20 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		3099CDC12CE3FB3400A84F61 /* Detail Screen */ = {
+		3099CDC12CE3FB3400A84F61 /* DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
 				3099CDC22CE3FB5200A84F61 /* DetailScreen.swift */,
 			);
-			path = "Detail Screen";
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		3099CDC42CE4100C00A84F61 /* AddEmployeeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3099CDC52CE4106300A84F61 /* AddEmployeeScreen.swift */,
+			);
+			path = AddEmployeeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 				3099CDAE2CE26D6700A84F61 /* EmployeeCoreDataEntity+Extension.swift in Sources */,
 				304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */,
 				3099CDBB2CE3584E00A84F61 /* HomeScreenViewModel.swift in Sources */,
+				3099CDC62CE4106300A84F61 /* AddEmployeeScreen.swift in Sources */,
 				3099CDA82CE265D500A84F61 /* LocalEmployeeDataSource.swift in Sources */,
 				3099CDAC2CE26C0000A84F61 /* EmployeeCoreDataEntityMapper.swift in Sources */,
 				3099CDA62CE261DF00A84F61 /* GenderModel.swift in Sources */,
