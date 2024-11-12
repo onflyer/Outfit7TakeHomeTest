@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddEmployeeScreen: View {
+    
     @State private var name: String = ""
     @State private var lastName: String = ""
     @State private var age: Int = 0
@@ -27,8 +28,6 @@ struct AddEmployeeScreen: View {
                         }
                     }
                 }
-               
-                
             }
             .navigationTitle("Add employee")
         }
