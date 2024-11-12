@@ -8,7 +8,8 @@
 import Foundation
 
 extension EmployeeCoreDataEntity {
+    
     func toDomain() -> EmployeeDomainModel {
-        return EmployeeDomainModel(id: id, name: name, lastName: lastName, age: age, gender: Gender(rawValue: gender) ?? .unknown)
+        EmployeeDomainModel(id: id, name: name, lastName: lastName, age: age, gender: Gender(rawValue: gender) ?? .unknown)
     }
 }

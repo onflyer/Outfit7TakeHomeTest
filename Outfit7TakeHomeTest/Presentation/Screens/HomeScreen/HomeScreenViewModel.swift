@@ -9,12 +9,12 @@ import Foundation
 
 class HomeScreenViewModel: ObservableObject {
     
+    @Published var state: ViewState = .idle
+    @Published var employees: [EmployeeDomainModel] = []
+    
     let repository: EmployeesLocalRepository
     
     init(repository: EmployeesLocalRepository) {
         self.repository = repository
     }
-    
-    @Published var state: ViewState = .idle
-    @Published var employees: [EmployeeDomainModel] = []
 }

@@ -8,20 +8,17 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @StateObject var viewModel = HomeScreenViewModel(
-        repository: EmployeesLocalRepository(
-            repository: LocalEmployeeDataSource(
-                coreDataService: CoreDataService())))
+    @StateObject var viewModel: HomeScreenViewModel
     
     var body: some View {
         NavigationStack {
-        Text("")
-            .navigationTitle("Employees")
+            Text("")
+                .navigationTitle("Employees")
         }
         
     }
 }
 
 #Preview {
-    HomeScreen()
+    HomeScreen(viewModel: HomeScreenViewModel(repository: EmployeesLocalRepository(repository: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
 }

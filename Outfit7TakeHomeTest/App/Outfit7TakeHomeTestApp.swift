@@ -25,7 +25,7 @@ struct Outfit7TakeHomeTestApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView() 
+            HomeScreen(viewModel: HomeScreenViewModel(repository: EmployeesLocalRepository(repository: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
         }
     }
 }

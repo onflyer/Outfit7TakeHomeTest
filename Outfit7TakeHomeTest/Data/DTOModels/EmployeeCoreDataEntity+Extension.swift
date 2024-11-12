@@ -11,28 +11,28 @@ import CoreData
 extension EmployeeCoreDataEntity {
     
     public var id: UUID {
-        get {id_ ?? UUID()}
-        set {id_ = newValue}
+        get { id_ ?? UUID() }
+        set { id_ = newValue }
+        
     }
     public var name: String {
-        get {name_ ?? "N/A"}
-        set {name_ = newValue}
+        get { name_ ?? "N/A" }
+        set { name_ = newValue }
     }
     
     public var lastName: String {
-        get {lastName_ ?? "N/A"}
-        set {lastName_ = newValue}
+        get { lastName_ ?? "N/A" }
+        set { lastName_ = newValue }
     }
     
     public var age: Int {
-        get {Int(age_)}
-        set {age_ = Int64(newValue)}
+        get { Int(age_) }
+        set { age_ = Int64(newValue) }
     }
     
     public var gender: String {
-        get {gender_ ?? "N/A"
-        }
-        set {gender_ = newValue}
+        get { gender_ ?? "N/A" }
+        set { gender_ = newValue }
     }
     
     convenience init(id: UUID, name: String, lastName: String, age: Int, gender: Gender.RawValue, context: NSManagedObjectContext) {

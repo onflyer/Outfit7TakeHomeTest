@@ -19,6 +19,5 @@ extension EmployeeDomainModel {
         employeeCoreDataEntity.gender = gender.rawValue
         
         return employeeCoreDataEntity
-        
     }
 }

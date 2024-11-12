@@ -12,7 +12,8 @@ open class CoreDataService {
     public static let modelName = "EmployeeCoreDataModel"
     public static let model: NSManagedObjectModel = {
         let modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd")!
-        return NSManagedObjectModel(contentsOf: modelURL)!}()
+        return NSManagedObjectModel(contentsOf: modelURL)!
+    }()
     
     public init() {}
     
@@ -36,13 +37,15 @@ open class CoreDataService {
     }
     
     public func saveDerivedContext(_ context: NSManagedObjectContext) {
-        context.perform {
+        context.perform { [weak self] in
             do {
                 try context.save()
             } catch let error as NSError {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                assertionFailure("Unresolved error \(error), \(error.userInfo)")
             }
-            
+            guard let self else {
+                return
+            }
             self.saveContext(self.mainContext)
         }
     }
@@ -57,7 +60,7 @@ open class CoreDataService {
             do {
                 try context.save()
             } catch let error as NSError {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                assertionFailure("Unresolved error \(error), \(error.userInfo)")
             }
         }
     }

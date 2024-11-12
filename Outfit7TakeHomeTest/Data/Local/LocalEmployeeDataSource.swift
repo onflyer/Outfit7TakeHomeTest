@@ -32,7 +32,7 @@ class LocalEmployeeDataSource {
     }
     
     func addEmployee(employee: EmployeeDomainModel) async throws {
-       let result = employee.toCoreDataEntity(in: managedObjectContext)
+        let _ = employee.toCoreDataEntity(in: managedObjectContext)
         await managedObjectContext.perform {
             self.coreDataService.saveContext()
         }
