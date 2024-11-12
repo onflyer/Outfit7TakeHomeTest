@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @StateObject var viewModel = HomeScreenViewModel(
+        repository: EmployeesLocalRepository(
+            repository: LocalEmployeeDataSource(
+                coreDataService: CoreDataService())))
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
