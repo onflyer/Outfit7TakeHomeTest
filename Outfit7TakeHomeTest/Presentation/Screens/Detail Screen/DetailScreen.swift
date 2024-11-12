@@ -10,15 +10,27 @@ import SwiftUI
 struct DetailScreen: View {
     
     let employee: EmployeeDomainModel
+    @State private var name: String = ""
     
     var body: some View {
         VStack {
-            Image(systemName: "person.crop.circle")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200, height: 200)
-                .padding(.top, 30)
+            ZStack {
+               
+                Image(systemName: "person.crop.circle")
+                    .resizable()
+                    .scaledToFit()
+                    
+                   
+                .padding(40)
+            }
+            .frame(width: .infinity, height: 300)
             Spacer()
+            Form(content: {
+                Section("Personal info") {
+                    TextField("Enter name", text: $name)
+                }
+                
+            })
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
