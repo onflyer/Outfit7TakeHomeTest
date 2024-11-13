@@ -26,10 +26,16 @@ struct HomeScreen: View {
                         }
                     }
                 }
+                .onDelete(perform: { indexSet in
+                    viewModel.removeEmployee(at: indexSet)
+                })
             }
             .animation(.default, value: viewModel.employees)
             .navigationTitle("Employees")
             .toolbar(content: {
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
                         isShowingSheet.toggle()

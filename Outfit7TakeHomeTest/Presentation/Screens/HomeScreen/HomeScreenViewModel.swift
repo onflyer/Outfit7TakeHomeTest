@@ -47,4 +47,14 @@ extension HomeScreenViewModel {
             print(error)
         }
     }
+    
+    func removeEmployee(at offsets: IndexSet) {
+        offsets.forEach { index in
+            let employee = self.employees[index]
+            Task {
+                await repository.removeEmployee(employee: employee)
+                await fetchEmployees()
+            }
+        }
+    }
 }
