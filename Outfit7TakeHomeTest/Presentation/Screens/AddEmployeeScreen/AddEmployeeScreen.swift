@@ -11,8 +11,12 @@ struct AddEmployeeScreen: View {
     
     @State private var name: String = ""
     @State private var lastName: String = ""
-    @State private var age: Int = 0
+    @State private var age: Int = 18
     @State private var gender: Gender = .unknown
+    
+    var isFormValid: Bool {
+        !name.isEmpty && !lastName.isEmpty
+    }
     
     var body: some View {
         NavigationStack {
@@ -20,8 +24,12 @@ struct AddEmployeeScreen: View {
                 Section("Info") {
                     TextField("Enter employee's name", text: $name)
                     TextField("Enter employee's last name", text: $lastName)
-                    TextField("Enter employee's age", value: $age, formatter: formatter)
-                        .keyboardType(.numberPad)
+                    Picker("Select age", selection: $age) {
+                        ForEach(18..<100) { age in
+                            Text("\(age)").tag(age)
+                        }
+                    }
+                    .pickerStyle(.menu)
                     Picker("Gender", selection: $gender) {
                         ForEach(Gender.allCases) { gender in
                             Text(gender.rawValue)
@@ -29,6 +37,15 @@ struct AddEmployeeScreen: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Done") {
+                        
+                    }
+                    .disabled(!isFormValid)
+                }
+            }
+            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Add employee")
         }
     }

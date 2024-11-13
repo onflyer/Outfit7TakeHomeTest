@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @StateObject var viewModel: HomeScreenViewModel
+    
+    @StateObject var viewModel = HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
+    
     @State var isShowingSheet: Bool = false
     
     var body: some View {
@@ -20,8 +22,6 @@ struct HomeScreen: View {
                     } label: {
                         Text(employee.name)
                     }
-
-
                 }
             }
             .navigationTitle("Employees")
@@ -34,8 +34,8 @@ struct HomeScreen: View {
                     })
                 }
             })
-            .sheet(isPresented: $isShowingSheet, content: {
-                
+            .fullScreenCover(isPresented: $isShowingSheet, content: {
+                AddEmployeeScreen()
             })
         }
         
