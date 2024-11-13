@@ -44,7 +44,7 @@ struct EditScreen: View {
                 }
             }
             .navigationBarTitleDisplayMode(.large)
-            .navigationTitle("Add employee")
+            .navigationTitle("Edit employee")
         }
     }
 }

@@ -31,6 +31,13 @@ class LocalEmployeeDataSource {
         }
     }
     
+    func getOneEmployee(employee: EmployeeDomainModel) throws -> EmployeeDomainModel? {
+        let fetchRequest = EmployeeCoreDataEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id_ == %@", employee.id as CVarArg)
+        let employee = try managedObjectContext.fetch(fetchRequest)
+        return employee.first?.toDomain()
+    }
+    
     func addEmployee(employee: EmployeeDomainModel) async throws {
         let _ = employee.toCoreDataEntity(in: managedObjectContext)
         await managedObjectContext.perform {
