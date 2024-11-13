@@ -9,6 +9,10 @@ import SwiftUI
 
 struct AddEmployeeScreen: View {
     
+    @ObservedObject var viewModel: HomeScreenViewModel
+    
+    @Environment (\.dismiss) private var dismiss
+    
     @State private var name: String = ""
     @State private var lastName: String = ""
     @State private var age: Int = 18
@@ -30,6 +34,7 @@ struct AddEmployeeScreen: View {
                         }
                     }
                     .pickerStyle(.menu)
+                    
                     Picker("Gender", selection: $gender) {
                         ForEach(Gender.allCases) { gender in
                             Text(gender.rawValue)
@@ -40,7 +45,11 @@ struct AddEmployeeScreen: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Done") {
-                        
+                        let employee = EmployeeDomainModel(id: UUID(), name: name, lastName: lastName, age: age, gender: gender)
+                        Task {
+                           await viewModel.addEmployee(employee: employee)
+                        }
+                        dismiss()
                     }
                     .disabled(!isFormValid)
                 }
@@ -58,5 +67,5 @@ struct AddEmployeeScreen: View {
 }
 
 #Preview {
-    AddEmployeeScreen()
+    AddEmployeeScreen(viewModel: HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
 }

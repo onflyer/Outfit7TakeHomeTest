@@ -39,9 +39,10 @@ extension HomeScreenViewModel {
     }
     
     func addEmployee(employee: EmployeeDomainModel) async {
-        let employee = EmployeeDomainModel(id: UUID(), name: employee.name, lastName: employee.lastName, age: employee.age, gender: employee.gender)
+        let employee = EmployeeDomainModel(id: employee.id, name: employee.name, lastName: employee.lastName, age: employee.age, gender: employee.gender)
         do {
             try await repository.addEmployee(employee: employee)
+            await fetchEmployees()
         } catch {
             print(error)
         }

@@ -20,7 +20,10 @@ struct HomeScreen: View {
                     NavigationLink {
                         DetailScreen(employee: employee)
                     } label: {
-                        Text(employee.name)
+                        HStack {
+                            Text(employee.name)
+                            Text(employee.lastName)
+                        }
                     }
                 }
             }
@@ -35,10 +38,9 @@ struct HomeScreen: View {
                 }
             })
             .fullScreenCover(isPresented: $isShowingSheet, content: {
-                AddEmployeeScreen()
+                AddEmployeeScreen(viewModel: viewModel)
             })
         }
-        
         .task {
             await viewModel.fetchEmployees()
         }
