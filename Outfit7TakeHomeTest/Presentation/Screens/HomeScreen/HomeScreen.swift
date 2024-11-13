@@ -27,6 +27,7 @@ struct HomeScreen: View {
                     }
                 }
             }
+            .animation(.default, value: viewModel.employees)
             .navigationTitle("Employees")
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {

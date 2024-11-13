@@ -16,3 +16,9 @@ struct EmployeeDomainModel: Identifiable {
     let gender: Gender
     
 }
+
+extension EmployeeDomainModel: Equatable {
+    static func ==(lhs: EmployeeDomainModel, rhs: EmployeeDomainModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
