@@ -31,9 +31,9 @@ class LocalEmployeeDataSource {
         }
     }
     
-    func getOneEmployee(employee: EmployeeDomainModel) throws -> EmployeeDomainModel? {
+    func getOneEmployee(id: UUID) throws -> EmployeeDomainModel? {
         let fetchRequest = EmployeeCoreDataEntity.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id_ == %@", employee.id as CVarArg)
+        fetchRequest.predicate = NSPredicate(format: "id_ == %@", id as CVarArg)
         let employee = try managedObjectContext.fetch(fetchRequest)
         return employee.first?.toDomain()
     }

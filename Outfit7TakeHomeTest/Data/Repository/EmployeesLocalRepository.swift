@@ -20,8 +20,8 @@ class EmployeesLocalRepository {
         return result
     }
     
-    func getOneEmployee(employee: EmployeeDomainModel) -> EmployeeDomainModel? {
-       try? dataSource.getOneEmployee(employee: employee)
+    func getOneEmployee(id: UUID) -> EmployeeDomainModel? {
+        try? dataSource.getOneEmployee(id: id)
     }
     
     func addEmployee(employee: EmployeeDomainModel) async throws {

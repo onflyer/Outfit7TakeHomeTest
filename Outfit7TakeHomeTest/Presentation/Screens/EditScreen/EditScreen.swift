@@ -13,8 +13,8 @@ struct EditScreen: View {
     
     @Environment (\.dismiss) private var dismiss
     
-    var employee: EmployeeDomainModel
-    
+    let id: UUID
+        
     var body: some View {
         NavigationStack {
             Form {
@@ -43,6 +43,9 @@ struct EditScreen: View {
                     }
                 }
             }
+            .task {
+                viewModel.getEmployee(id: id)
+            }
             .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Edit employee")
         }
@@ -50,5 +53,6 @@ struct EditScreen: View {
 }
 
 #Preview {
-    EditScreen(viewModel: EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))), employee: EmployeeDomainModel(id: UUID(), name: "name", lastName: "last name", age: 31, gender: .male))
+    EditScreen(viewModel: EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))), id: UUID())
+    
 }
