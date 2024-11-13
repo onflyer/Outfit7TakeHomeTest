@@ -51,7 +51,6 @@ struct HomeScreen: View {
         .task {
             await viewModel.fetchEmployees()
         }
-        
     }
 }
 

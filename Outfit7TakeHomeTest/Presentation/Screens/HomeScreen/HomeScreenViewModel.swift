@@ -57,4 +57,12 @@ extension HomeScreenViewModel {
             }
         }
     }
+    
+    func updateEmployee(employee: EmployeeDomainModel) {
+        do {
+            try repository.updateEmployee(employee: employee)
+        } catch {
+            print(error)
+        }
+    }
 }

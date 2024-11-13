@@ -11,6 +11,8 @@ struct DetailScreen: View {
     
     let employee: EmployeeDomainModel
     
+    @State private var isShowingEdit: Bool = false
+    
     var body: some View {
         VStack {
             ZStack {
@@ -28,7 +30,9 @@ struct DetailScreen: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: 300)
+            
             Spacer()
+            
             Form(content: {
                 Section("Personal info") {
                     VStack(alignment: .leading) {
@@ -44,11 +48,15 @@ struct DetailScreen: View {
                 }
             })
         }
+        .sheet(isPresented: $isShowingEdit, content: {
+           
+        })
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Edit") {
-                    
+                    isShowingEdit.toggle()
                 }
+
             }
         }
         .navigationTitle("Employee details")

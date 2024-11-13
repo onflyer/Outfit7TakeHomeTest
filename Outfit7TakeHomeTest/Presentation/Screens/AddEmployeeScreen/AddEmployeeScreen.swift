@@ -58,12 +58,6 @@ struct AddEmployeeScreen: View {
             .navigationTitle("Add employee")
         }
     }
-    
-    let formatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.zeroSymbol = ""
-        return formatter
-    }()
 }
 
 #Preview {

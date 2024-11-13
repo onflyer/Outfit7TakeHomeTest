@@ -36,7 +36,7 @@ class EmployeesLocalRepository {
         }
     }
     
-    func updateEmployee(employee: EmployeeDomainModel) async {
+    func updateEmployee(employee: EmployeeDomainModel) throws {
         do {
             try dataSource.updateEmployee(employee: employee)
         } catch {
