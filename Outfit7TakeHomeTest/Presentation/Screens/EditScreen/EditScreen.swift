@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditScreen: View {
     
-    @ObservedObject var viewModel: EditScreenViewModel
+    @StateObject var viewModel = EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
     
     @Environment (\.dismiss) private var dismiss
     

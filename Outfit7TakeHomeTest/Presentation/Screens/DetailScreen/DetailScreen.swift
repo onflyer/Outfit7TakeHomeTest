@@ -49,7 +49,7 @@ struct DetailScreen: View {
             })
         }
         .sheet(isPresented: $isShowingEdit, content: {
-           
+            EditScreen(id: employee.id)
         })
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
