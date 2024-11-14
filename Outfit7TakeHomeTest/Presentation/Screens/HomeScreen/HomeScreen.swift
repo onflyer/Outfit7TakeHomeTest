@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    @StateObject var viewModel = HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
+    @EnvironmentObject var viewModel : HomeScreenViewModel
     
     @State var isShowingSheet: Bool = false
     
@@ -54,5 +54,6 @@ struct HomeScreen: View {
 }
 
 #Preview {
-    HomeScreen(viewModel: HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
+    HomeScreen()
+        .environmentObject(HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
 }

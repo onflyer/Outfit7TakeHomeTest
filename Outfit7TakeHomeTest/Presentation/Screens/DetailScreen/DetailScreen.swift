@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailScreen: View {
     
     @StateObject var viewModel = EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
-    
+        
     let employeeId: UUID
     
     @State private var isShowingEdit: Bool = false

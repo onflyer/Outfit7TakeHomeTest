@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct Outfit7TakeHomeTestApp: App {
     
+    @StateObject var viewModel = HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
+    
     //    static func main() async {
     //        let instance = EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))
     //        let employee = EmployeeDomainModel(id: UUID(), name: "test3", lastName: "test3", age: 33, gender: .unknown)
@@ -25,6 +27,7 @@ struct Outfit7TakeHomeTestApp: App {
     var body: some Scene {
         WindowGroup {
             HomeScreen()
+                .environmentObject(viewModel)
         }
     }
 }
