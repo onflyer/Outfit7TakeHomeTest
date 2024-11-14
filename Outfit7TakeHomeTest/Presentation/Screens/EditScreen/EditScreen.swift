@@ -45,6 +45,7 @@ struct EditScreen: View {
                         dismiss()
                         
                     }
+                    .disabled(!viewModel.isFormValid)
                 }
             }
             .navigationTitle("Edit employee")

@@ -29,6 +29,10 @@ class HomeScreenViewModel: ObservableObject {
 
 extension HomeScreenViewModel {
     
+    var isFormValid: Bool {
+        !name.isEmpty && !lastName.isEmpty
+    }
+    
     func fetchEmployees() async {
         do {
             state = .loading
