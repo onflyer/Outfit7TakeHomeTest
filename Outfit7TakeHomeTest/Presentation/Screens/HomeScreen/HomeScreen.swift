@@ -18,7 +18,7 @@ struct HomeScreen: View {
             List {
                 ForEach(viewModel.employees) { employee in
                     NavigationLink {
-                        DetailScreen(employee: employee)
+                        DetailScreen(employeeId: employee.id)
                     } label: {
                         HStack {
                             Text(employee.name)

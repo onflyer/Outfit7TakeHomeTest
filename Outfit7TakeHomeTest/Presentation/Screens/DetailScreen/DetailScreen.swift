@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DetailScreen: View {
     
-    let employee: EmployeeDomainModel
+    @StateObject var viewModel = EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
+    
+    let employeeId: UUID
     
     @State private var isShowingEdit: Bool = false
     
@@ -23,8 +25,8 @@ struct DetailScreen: View {
                         .foregroundStyle(.tertiary)
                         .padding(30)
                     HStack {
-                        Text(employee.name)
-                        Text(employee.lastName)
+                        Text(viewModel.name)
+                        Text(viewModel.lastName)
                     }
                     .font(.largeTitle)
                 }
@@ -38,18 +40,18 @@ struct DetailScreen: View {
                     VStack(alignment: .leading) {
                         Text("Age")
                             .font(.footnote)
-                        Text("\(employee.age)")
+                        Text("\(viewModel.age)")
                     }
                     VStack(alignment: .leading) {
                         Text("Gender")
                             .font(.footnote)
-                        Text("\(employee.gender.rawValue)")
+                        Text("\(viewModel.gender.rawValue)")
                     }
                 }
             })
         }
         .sheet(isPresented: $isShowingEdit, content: {
-            EditScreen(id: employee.id)
+            EditScreen(id: employeeId)
         })
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -59,11 +61,14 @@ struct DetailScreen: View {
 
             }
         }
+        .task {
+            viewModel.getEmployee(id: employeeId)
+        }
         .navigationTitle("Employee details")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    DetailScreen(employee: EmployeeDomainModel(id: UUID(), name: "Aleksandar", lastName: "Milidrag", age: 21, gender: .male))
+    DetailScreen(employeeId: UUID())
 }
