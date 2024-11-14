@@ -11,6 +11,7 @@ struct EditScreen: View {
     
     @StateObject var viewModel = EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
     
+    
     @Environment (\.dismiss) private var dismiss
     
     let id: UUID
@@ -39,7 +40,10 @@ struct EditScreen: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Done") {
                         viewModel.updateEmployee(employee: EmployeeDomainModel(id: viewModel.employee!.id, name: viewModel.name, lastName: viewModel.lastName, age: viewModel.age, gender: viewModel.gender))
+                        viewModel.getEmployee(id: id)
                         dismiss()
+                        
+                        
                     }
                 }
             }

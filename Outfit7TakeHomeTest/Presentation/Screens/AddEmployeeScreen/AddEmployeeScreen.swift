@@ -44,6 +44,11 @@ struct AddEmployeeScreen: View {
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
+                    Button("Cancel") {
+                       dismiss()
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
                     Button("Done") {
                         let employee = EmployeeDomainModel(id: UUID(), name: name, lastName: lastName, age: age, gender: gender)
                         Task {
