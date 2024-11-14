@@ -44,7 +44,7 @@ struct HomeScreen: View {
                 }
             })
             .fullScreenCover(isPresented: $isShowingSheet, content: {
-                AddEmployeeScreen(viewModel: viewModel)
+                AddEmployeeScreen()
             })
         }
         .task {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddEmployeeScreen: View {
     
-    @ObservedObject var viewModel: HomeScreenViewModel
+    @EnvironmentObject var viewModel: HomeScreenViewModel
     
     @Environment (\.dismiss) private var dismiss
     
@@ -66,5 +66,6 @@ struct AddEmployeeScreen: View {
 }
 
 #Preview {
-    AddEmployeeScreen(viewModel: HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
+    AddEmployeeScreen()
+        .environmentObject(HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
 }

@@ -9,10 +9,7 @@ import SwiftUI
 
 struct EditScreen: View {
     
-    @StateObject var viewModel = EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
-    
-    @EnvironmentObject var homeScreen: HomeScreenViewModel
-    
+    @EnvironmentObject var viewModel: HomeScreenViewModel
     
     @Environment (\.dismiss) private var dismiss
     
@@ -43,7 +40,7 @@ struct EditScreen: View {
                     Button("Done") {
                         viewModel.updateEmployee(employee: EmployeeDomainModel(id: viewModel.employee!.id, name: viewModel.name, lastName: viewModel.lastName, age: viewModel.age, gender: viewModel.gender))
                         Task {
-                            await homeScreen.fetchEmployees()
+                            await viewModel.fetchEmployees()
                         }
                         dismiss()
                         
@@ -59,6 +56,7 @@ struct EditScreen: View {
 }
 
 #Preview {
-    EditScreen(viewModel: EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))), id: UUID())
+    EditScreen(id: UUID())
+        .environmentObject(HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
     
 }

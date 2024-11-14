@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailScreen: View {
     
-    @StateObject var viewModel = EditScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService())))
+    @EnvironmentObject var viewModel: HomeScreenViewModel
         
     let employeeId: UUID
     

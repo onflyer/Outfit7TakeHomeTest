@@ -18,6 +18,13 @@ class HomeScreenViewModel: ObservableObject {
     init(repository: EmployeesLocalRepository) {
         self.repository = repository
     }
+    
+    @Published var employee: EmployeeDomainModel? = nil
+    
+    @Published var name: String = ""
+    @Published var lastName: String = ""
+    @Published var age: Int = 18
+    @Published var gender: Gender = .unknown
 }
 
 extension HomeScreenViewModel {
@@ -55,6 +62,17 @@ extension HomeScreenViewModel {
                 await repository.removeEmployee(employee: employee)
                 await fetchEmployees()
             }
+        }
+    }
+    
+    func getEmployee(id: UUID) {
+        let result = repository.getOneEmployee(id: id)
+        employee = result
+        if let unwrappedEmployee = employee {
+            name = unwrappedEmployee.name
+            lastName = unwrappedEmployee.lastName
+            age = unwrappedEmployee.age
+            gender = unwrappedEmployee.gender
         }
     }
     
