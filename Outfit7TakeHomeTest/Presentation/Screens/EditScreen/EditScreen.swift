@@ -40,9 +40,7 @@ struct EditScreen: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Done") {
                         viewModel.updateEmployee(employee: EmployeeDomainModel(id: viewModel.employee!.id, name: viewModel.name, lastName: viewModel.lastName, age: viewModel.age, gender: viewModel.gender))
-                        viewModel.getEmployee(id: id)
                         dismiss()
-                        
                         
                     }
                 }
@@ -50,7 +48,6 @@ struct EditScreen: View {
             .task {
                 viewModel.getEmployee(id: id)
             }
-            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Edit employee")
         }
     }

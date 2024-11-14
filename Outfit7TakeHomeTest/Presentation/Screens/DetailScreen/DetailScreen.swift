@@ -50,7 +50,9 @@ struct DetailScreen: View {
                 }
             })
         }
-        .sheet(isPresented: $isShowingEdit, content: {
+        .sheet(isPresented: $isShowingEdit,onDismiss: {
+            viewModel.getEmployee(id: employeeId)
+        } ,content: {
             EditScreen(id: employeeId)
         })
         .toolbar {
