@@ -12,18 +12,6 @@ struct Outfit7TakeHomeTestApp: App {
     
     @StateObject var repository = HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource (coreDataService: CoreDataService())))
     
-    //    static func main() async {
-    //        let instance = EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))
-    //        let employee = EmployeeDomainModel(id: UUID(), name: "test3", lastName: "test3", age: 33, gender: .unknown)
-    //        do {
-    //            try await instance.dataSource.addEmployee(employee: employee)
-    //        } catch {
-    //            print(error)
-    //        }
-    //        let result2 = try? await instance.dataSource.getEmployees()
-    //        print(result2)
-    //    }
-    
     var body: some Scene {
         WindowGroup {
             HomeScreen()

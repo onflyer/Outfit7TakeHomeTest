@@ -47,10 +47,10 @@ struct EditScreen: View {
                     }
                 }
             }
+            .navigationTitle("Edit employee")
             .task {
                 viewModel.getEmployee(id: id)
             }
-            .navigationTitle("Edit employee")
         }
     }
 }
