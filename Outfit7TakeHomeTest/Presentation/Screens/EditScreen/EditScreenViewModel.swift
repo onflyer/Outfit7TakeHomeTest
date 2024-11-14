@@ -36,4 +36,12 @@ extension EditScreenViewModel {
             gender = unwrappedEmployee.gender
         }
     }
+    
+    func updateEmployee(employee: EmployeeDomainModel) {
+        do {
+            try repository.updateEmployee(employee: employee)
+        } catch {
+            print(error)
+        }
+    }
 }
