@@ -88,11 +88,22 @@ extension HomeScreenViewModel {
         }
     }
     
-    func provideAverageAge() -> Double {
+    func getAverageAge() -> Double {
        let ageSum = employees.map {
             $0.age
         }
         let averageAge = Double(ageSum.average())
         return averageAge
+    }
+    
+    func getGenderPercentage() -> String {
+        let employeeCount = employees.count
+        let maleCount = employees.filter({ $0.gender == .male }).count
+        let femaleCount = employees.filter({ $0.gender == .female }).count
+        
+        let malePercentage = Double(maleCount) / Double(employeeCount) * 100
+        let femalePercentage = Double(maleCount) / Double(employeeCount) * 100
+        
+        return String("Male to Female percentage is: \(malePercentage) to \(femalePercentage) %") 
     }
 }

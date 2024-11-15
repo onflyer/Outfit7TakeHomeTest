@@ -20,8 +20,8 @@ struct ModalView: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading,spacing: 10) {
-                Text("Average age of the employees is: \(viewModel.provideAverageAge(), specifier: "%.1f")")
-                Text("Male to Female percentage is: \(malePercentage) to \(femalePercentage) %")
+                Text("Average age of the employees is: \(viewModel.getAverageAge(), specifier: "%.1f")")
+                Text("Male to Female percentage is: \(malePercentage) %")
             }
             .frame(maxWidth: .infinity, maxHeight: 300, alignment: .leading)
             .padding()
