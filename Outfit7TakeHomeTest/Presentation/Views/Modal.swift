@@ -32,10 +32,13 @@ struct Modal: View {
                     .bold()
                     .padding()
                 
-                Text("Average age of the employees is: \(age)")
-                    .font(.body)
+                VStack(alignment: .leading) {
+                    Text(age)
+                        .font(.body)
+                    
+                    Text(percentage)
+                }
                 
-                Text(percentage)
                 
                 Button {
                     action()
@@ -72,12 +75,12 @@ struct Modal: View {
     func close() {
         withAnimation(.spring()) {
             offset = 1000
-            isShowingStats = false
+            isShowingStats.toggle()
         }
     }
 }
 
 #Preview {
-    Modal(isShowingStats: .constant(true), age: "Message.", percentage: "\(11.0)", buttonTitle: "OK", action: {})
+    Modal(isShowingStats: .constant(true), age: "\(10)", percentage: "\(11.0)", buttonTitle: "OK", action: {})
 }
 

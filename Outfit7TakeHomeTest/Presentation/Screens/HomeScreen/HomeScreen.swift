@@ -54,13 +54,12 @@ struct HomeScreen: View {
                 AddEmployeeScreen()
             })
         }
-        .overlay(content: {
+        .overlay {
             if isShovingStats {
-                Modal(isShowingStats: $isShovingStats, age: "Average age of the employees is: \(viewModel.getAverageAge())", percentage: "\(viewModel.getGenderPercentage())", buttonTitle: "OK") {
-                    
+                Modal(isShowingStats: $isShovingStats, age: "Average age of the employees is: \(viewModel.getAverageAge())", percentage: viewModel.getGenderPercentage(), buttonTitle: "OK") {
                 }
             }
-        })
+        }
         .task {
             await viewModel.fetchEmployees()
         }
