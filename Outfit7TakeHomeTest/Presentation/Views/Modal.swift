@@ -37,8 +37,6 @@ struct Modal: View {
                     
                     Text(percentage)
                 }
-                
-                
                 Button {
                     close()
                 } label: {
@@ -62,7 +60,7 @@ struct Modal: View {
             .padding(30)
             .offset(x: 0, y: offset)
             .onAppear {
-                withAnimation(.spring()) {
+                withAnimation(.spring(duration: 0.5)) {
                     offset = 0
                 }
             }
@@ -71,10 +69,10 @@ struct Modal: View {
     }
     
     func close() {
-        withAnimation(.spring()) {
+        withAnimation(.spring(duration: 0.5)) {
             offset = 1000
-            isShowingStats.toggle()
         }
+        isShowingStats = false
     }
 }
 
