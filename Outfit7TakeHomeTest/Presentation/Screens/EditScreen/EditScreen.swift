@@ -10,9 +10,7 @@ import SwiftUI
 struct EditScreen: View {
     
     @EnvironmentObject var viewModel: HomeScreenViewModel
-    
     @Environment (\.dismiss) private var dismiss
-    
     let id: UUID
         
     var body: some View {
