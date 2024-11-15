@@ -31,7 +31,7 @@ struct AddEmployeeScreen: View {
                     }
                     .pickerStyle(.menu)
                     
-                    Picker("Gender", selection: $gender) {
+                    Picker("Select gender", selection: $gender) {
                         ForEach(Gender.allCases) { gender in
                             Text(gender.rawValue)
                         }
