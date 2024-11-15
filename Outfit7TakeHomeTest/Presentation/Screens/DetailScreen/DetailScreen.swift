@@ -73,4 +73,5 @@ struct DetailScreen: View {
 
 #Preview {
     DetailScreen(employeeId: UUID())
+        .environmentObject(HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
 }

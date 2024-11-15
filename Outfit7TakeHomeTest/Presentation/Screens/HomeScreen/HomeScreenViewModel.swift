@@ -87,4 +87,12 @@ extension HomeScreenViewModel {
             print(error)
         }
     }
+    
+    func provideAverageAge() -> Double {
+       let ageSum = employees.map {
+            $0.age
+        }
+        let averageAge = Double(ageSum.average())
+        return averageAge
+    }
 }

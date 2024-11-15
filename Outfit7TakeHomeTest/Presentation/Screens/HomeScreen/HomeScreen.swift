@@ -38,7 +38,7 @@ struct HomeScreen: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack {
                         Button("Show stats") {
-                            
+                            viewModel.provideAverageAge()
                         }
                         Button(action: {
                             isShowingSheet.toggle()
