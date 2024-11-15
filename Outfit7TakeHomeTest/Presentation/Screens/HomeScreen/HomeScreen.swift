@@ -16,6 +16,9 @@ struct HomeScreen: View {
     
     var body: some View {
         NavigationStack {
+            if viewModel.employees.isEmpty {
+                ContentUnavailableView("Please add new employee", systemImage: "person.fill.badge.plus")
+            }
             List {
                 ForEach(viewModel.employees) { employee in
                     NavigationLink {
@@ -41,6 +44,7 @@ struct HomeScreen: View {
                         Button("Show stats") {
                             isShovingStats.toggle()
                         }
+                        .disabled(viewModel.employees.isEmpty)
                         Button(action: {
                             isShowingSheet.toggle()
                         }, label: {
