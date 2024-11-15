@@ -36,11 +36,17 @@ struct HomeScreen: View {
                     EditButton()
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        isShowingSheet.toggle()
-                    }, label: {
-                        Image(systemName: "plus")
-                    })
+                    HStack {
+                        Button("Show stats") {
+                            
+                        }
+                        Button(action: {
+                            isShowingSheet.toggle()
+                        }, label: {
+                            Image(systemName: "plus")
+                        })
+
+                    }
                 }
             })
             .fullScreenCover(isPresented: $isShowingSheet, content: {
