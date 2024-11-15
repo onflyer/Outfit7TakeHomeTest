@@ -69,6 +69,27 @@ struct HomeScreen: View {
     }
 }
 
+extension HomeScreen {
+    
+    var employeeList: some View {
+        List {
+            ForEach(viewModel.employees) { employee in
+                NavigationLink {
+                    DetailScreen(employeeId: employee.id)
+                } label: {
+                    HStack {
+                        Text(employee.name)
+                        Text(employee.lastName)
+                    }
+                }
+            }
+            .onDelete(perform: { indexSet in
+                viewModel.removeEmployee(at: indexSet)
+            })
+        }
+    }
+}
+
 #Preview {
     HomeScreen()
         .environmentObject(HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
