@@ -104,6 +104,6 @@ extension HomeScreenViewModel {
         let malePercentage = Double(maleCount) / Double(employeeCount) * 100
         let femalePercentage = Double(maleCount) / Double(employeeCount) * 100
         
-        return String("Male to Female percentage is: \(malePercentage) to \(femalePercentage) %") 
+        return String("Male to Female percentage is: \(malePercentage) to \(femalePercentage)%") 
     }
 }

@@ -12,6 +12,7 @@ struct HomeScreen: View {
     @EnvironmentObject var viewModel : HomeScreenViewModel
     
     @State var isShowingSheet: Bool = false
+    @State var isShovingStats: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -30,6 +31,9 @@ struct HomeScreen: View {
                     viewModel.removeEmployee(at: indexSet)
                 })
             }
+            .popover(isPresented: $isShovingStats, attachmentAnchor: .point(.center), arrowEdge: .bottom) {
+                ModalView()
+            }
             .navigationTitle("Employees")
             .toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {
@@ -38,7 +42,7 @@ struct HomeScreen: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack {
                         Button("Show stats") {
-                            viewModel.provideAverageAge()
+                            isShovingStats.toggle()
                         }
                         Button(action: {
                             isShowingSheet.toggle()
