@@ -15,7 +15,6 @@ struct Modal: View {
     let age: String
     let percentage: String
     let buttonTitle: String
-    let action: () -> ()
     @State private var offset: CGFloat = 1000
     
     var body: some View {
@@ -41,7 +40,6 @@ struct Modal: View {
                 
                 
                 Button {
-                    action()
                     close()
                 } label: {
                     ZStack {
@@ -81,6 +79,6 @@ struct Modal: View {
 }
 
 #Preview {
-    Modal(isShowingStats: .constant(true), age: "\(10)", percentage: "\(11.0)", buttonTitle: "OK", action: {})
+    Modal(isShowingStats: .constant(true), age: "\(10)", percentage: "\(11.0)", buttonTitle: "OK")
 }
 
