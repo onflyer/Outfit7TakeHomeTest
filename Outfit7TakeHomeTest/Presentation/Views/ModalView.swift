@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ModalView: View {
+    
+    @EnvironmentObject var viewModel: HomeScreenViewModel
+    
+    @Binding var isShowing: Bool
+    
     @State private var averageAge: Double = 0
     @State private var malePercentage: Int = 0
     @State private var femalePercentage: Int = 0
@@ -32,5 +37,6 @@ struct ModalView: View {
 }
 
 #Preview {
-    ModalView()
+    ModalView(isShowing: .constant(true))
+        .environmentObject(HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
 }
