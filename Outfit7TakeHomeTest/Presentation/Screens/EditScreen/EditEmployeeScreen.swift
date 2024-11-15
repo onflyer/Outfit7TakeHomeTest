@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EditScreen: View {
+struct EditEmployeeScreen: View {
     
     @EnvironmentObject var viewModel: HomeScreenViewModel
     @Environment (\.dismiss) private var dismiss
@@ -36,7 +36,7 @@ struct EditScreen: View {
     }
 }
 
-extension EditScreen {
+extension EditEmployeeScreen {
     var nameTextfield: some View {
         TextField("Enter employee's name", text: $viewModel.name)
         
@@ -89,7 +89,7 @@ extension EditScreen {
 }
 
 #Preview {
-    EditScreen(id: UUID())
+    EditEmployeeScreen(id: UUID())
         .environmentObject(HomeScreenViewModel(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
     
 }

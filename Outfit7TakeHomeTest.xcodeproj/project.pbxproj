@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		300238C72CE5368F00CE16AC /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238C62CE5368F00CE16AC /* EditScreen.swift */; };
+		300238C72CE5368F00CE16AC /* EditEmployeeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238C62CE5368F00CE16AC /* EditEmployeeScreen.swift */; };
 		300238CE2CE7451600CE16AC /* Collection + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238CD2CE7451600CE16AC /* Collection + Extension.swift */; };
 		300238D02CE7454300CE16AC /* Sequence + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238CF2CE7454300CE16AC /* Sequence + Extension.swift */; };
 		300238D22CE757EA00CE16AC /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238D12CE757EA00CE16AC /* ModalView.swift */; };
@@ -34,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		300238C62CE5368F00CE16AC /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
+		300238C62CE5368F00CE16AC /* EditEmployeeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmployeeScreen.swift; sourceTree = "<group>"; };
 		300238CD2CE7451600CE16AC /* Collection + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection + Extension.swift"; sourceTree = "<group>"; };
 		300238CF2CE7454300CE16AC /* Sequence + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence + Extension.swift"; sourceTree = "<group>"; };
 		300238D12CE757EA00CE16AC /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		300238C52CE5362400CE16AC /* EditScreen */ = {
 			isa = PBXGroup;
 			children = (
-				300238C62CE5368F00CE16AC /* EditScreen.swift */,
+				300238C62CE5368F00CE16AC /* EditEmployeeScreen.swift */,
 			);
 			path = EditScreen;
 			sourceTree = "<group>";
@@ -349,7 +349,7 @@
 				304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */,
 				3099CDBB2CE3584E00A84F61 /* HomeScreenViewModel.swift in Sources */,
 				3099CDC62CE4106300A84F61 /* AddEmployeeScreen.swift in Sources */,
-				300238C72CE5368F00CE16AC /* EditScreen.swift in Sources */,
+				300238C72CE5368F00CE16AC /* EditEmployeeScreen.swift in Sources */,
 				3099CDA82CE265D500A84F61 /* LocalEmployeeDataSource.swift in Sources */,
 				3099CDAC2CE26C0000A84F61 /* CoreDataToDomain.swift in Sources */,
 				3099CDA62CE261DF00A84F61 /* GenderModel.swift in Sources */,

@@ -53,7 +53,7 @@ struct DetailScreen: View {
         .sheet(isPresented: $isShowingEdit,onDismiss: {
             viewModel.getEmployee(id: employeeId)
         } ,content: {
-            EditScreen(id: employeeId)
+            EditEmployeeScreen(id: employeeId)
         })
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
