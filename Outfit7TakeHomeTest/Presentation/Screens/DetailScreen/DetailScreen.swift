@@ -10,64 +10,75 @@ import SwiftUI
 struct DetailScreen: View {
     
     @EnvironmentObject var viewModel: HomeScreenViewModel
-        
-    let employeeId: UUID
-    
     @State private var isShowingEdit: Bool = false
+    
+    let employeeId: UUID
     
     var body: some View {
         VStack {
-            ZStack {
-                VStack {
-                    Image(systemName: "person.crop.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundStyle(.tertiary)
-                        .padding(30)
-                    HStack {
-                        Text(viewModel.name)
-                        Text(viewModel.lastName)
-                    }
-                    .font(.largeTitle)
-                }
-            }
-            .frame(maxWidth: .infinity, maxHeight: 300)
-            
+            header
             Spacer()
-            
-            Form(content: {
-                Section("Personal info") {
-                    VStack(alignment: .leading) {
-                        Text("Age")
-                            .font(.footnote)
-                        Text("\(viewModel.age)")
-                    }
-                    VStack(alignment: .leading) {
-                        Text("Gender")
-                            .font(.footnote)
-                        Text("\(viewModel.gender.rawValue)")
-                    }
-                }
-            })
+            form
         }
-        .sheet(isPresented: $isShowingEdit,onDismiss: {
+        .sheet(isPresented: $isShowingEdit, onDismiss: {
             viewModel.getEmployee(id: employeeId)
-        } ,content: {
+        } , content: {
             EditEmployeeScreen(id: employeeId)
         })
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button("Edit") {
-                    isShowingEdit.toggle()
-                }
-
-            }
+            toolbarButtonDone
         }
         .task {
             viewModel.getEmployee(id: employeeId)
         }
         .navigationTitle("Employee details")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+extension DetailScreen {
+    
+    var header: some View {
+        ZStack {
+            VStack {
+                Image(systemName: "person.crop.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundStyle(.tertiary)
+                    .padding(30)
+                HStack {
+                    Text(viewModel.name)
+                    Text(viewModel.lastName)
+                }
+                .font(.largeTitle)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: 300)
+    }
+    
+    var form: some View {
+        Form(content: {
+            Section("Personal info") {
+                VStack(alignment: .leading) {
+                    Text("Age")
+                        .font(.footnote)
+                    Text("\(viewModel.age)")
+                }
+                VStack(alignment: .leading) {
+                    Text("Gender")
+                        .font(.footnote)
+                    Text("\(viewModel.gender.rawValue)")
+                }
+            }
+        })
+    }
+    
+    var toolbarButtonDone: some ToolbarContent {
+        ToolbarItem(placement: .topBarTrailing) {
+            Button("Edit") {
+                isShowingEdit.toggle()
+            }
+        }
     }
 }
 
