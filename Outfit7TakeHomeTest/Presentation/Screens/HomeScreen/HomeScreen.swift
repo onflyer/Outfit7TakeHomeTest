@@ -19,44 +19,15 @@ struct HomeScreen: View {
             if viewModel.employees.isEmpty {
                 ContentUnavailableView("Please add new employee", systemImage: "person.fill.badge.plus")
             }
-            List {
-                ForEach(viewModel.employees) { employee in
-                    NavigationLink {
-                        DetailScreen(employeeId: employee.id)
-                    } label: {
-                        HStack {
-                            Text(employee.name)
-                            Text(employee.lastName)
-                        }
-                    }
-                }
-                .onDelete(perform: { indexSet in
-                    viewModel.removeEmployee(at: indexSet)
+            employeeList
+                .navigationTitle("Employees")
+                .toolbar(content: {
+                    toolbarButtonEdit
+                    toolbarButtonStatsAndPlus
                 })
-            }
-            .navigationTitle("Employees")
-            .toolbar(content: {
-                ToolbarItem(placement: .topBarLeading) {
-                    EditButton()
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    HStack {
-                        Button("Show stats") {
-                            isShovingStats.toggle()
-                        }
-                        .disabled(viewModel.employees.isEmpty)
-                        Button(action: {
-                            isShowingSheet.toggle()
-                        }, label: {
-                            Image(systemName: "plus")
-                        })
-
-                    }
-                }
-            })
-            .fullScreenCover(isPresented: $isShowingSheet, content: {
-                AddEmployeeScreen()
-            })
+                .fullScreenCover(isPresented: $isShowingSheet, content: {
+                    AddEmployeeScreen()
+                })
         }
         .overlay {
             if isShovingStats {
@@ -86,6 +57,26 @@ extension HomeScreen {
             .onDelete(perform: { indexSet in
                 viewModel.removeEmployee(at: indexSet)
             })
+        }
+    }
+    var toolbarButtonEdit: some ToolbarContent {
+        ToolbarItem(placement: .topBarLeading) {
+            EditButton()
+        }
+    }
+    var toolbarButtonStatsAndPlus: some ToolbarContent {
+        ToolbarItem(placement: .topBarTrailing) {
+            HStack {
+                Button("Stats") {
+                    isShovingStats.toggle()
+                }
+                .disabled(viewModel.employees.isEmpty)
+                Button(action: {
+                    isShowingSheet.toggle()
+                }, label: {
+                    Image(systemName: "plus")
+                })
+            }
         }
     }
 }
