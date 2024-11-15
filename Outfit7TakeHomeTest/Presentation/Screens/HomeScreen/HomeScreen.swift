@@ -31,9 +31,6 @@ struct HomeScreen: View {
                     viewModel.removeEmployee(at: indexSet)
                 })
             }
-            .popover(isPresented: $isShovingStats, attachmentAnchor: .point(.center), arrowEdge: .bottom) {
-                ModalView()
-            }
             .navigationTitle("Employees")
             .toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {
@@ -57,6 +54,13 @@ struct HomeScreen: View {
                 AddEmployeeScreen()
             })
         }
+        .overlay(content: {
+            if isShovingStats {
+                Modal(isShowingStats: $isShovingStats, age: "Average age of the employees is: \(viewModel.getAverageAge())", percentage: "\(viewModel.getGenderPercentage())", buttonTitle: "OK") {
+                    
+                }
+            }
+        })
         .task {
             await viewModel.fetchEmployees()
         }

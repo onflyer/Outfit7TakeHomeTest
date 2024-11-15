@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct CustomDialog: View {
-    
+struct Modal: View {
+        
     @Binding var isShowingStats: Bool
     
-    let title: String
-    let message: String
+    let title: String = "Stats:"
+    let age: String
+    let percentage: String
     let buttonTitle: String
     let action: () -> ()
     @State private var offset: CGFloat = 1000
@@ -31,8 +32,10 @@ struct CustomDialog: View {
                     .bold()
                     .padding()
                 
-                Text(message)
+                Text("Average age of the employees is: \(age)")
                     .font(.body)
+                
+                Text(percentage)
                 
                 Button {
                     action()
@@ -40,7 +43,7 @@ struct CustomDialog: View {
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(.red)
+                            .foregroundColor(.blue)
                         
                         Text(buttonTitle)
                             .font(.system(size: 16, weight: .bold))
@@ -54,17 +57,6 @@ struct CustomDialog: View {
             .padding()
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 20))
-            .overlay(alignment: .topTrailing) {
-                Button {
-                    close()
-                } label: {
-                    Image(systemName: "xmark")
-                        .font(.title2)
-                        .fontWeight(.medium)
-                }
-                .tint(.black)
-                .padding()
-            }
             .shadow(radius: 20)
             .padding(30)
             .offset(x: 0, y: offset)
@@ -86,6 +78,6 @@ struct CustomDialog: View {
 }
 
 #Preview {
-    CustomDialog(isShowingStats: .constant(true), title: "Access photos?", message: "This lets you choose which photos you want to add to this project.", buttonTitle: "Give Access", action: {})
+    Modal(isShowingStats: .constant(true), age: "Message.", percentage: "\(11.0)", buttonTitle: "OK", action: {})
 }
 
