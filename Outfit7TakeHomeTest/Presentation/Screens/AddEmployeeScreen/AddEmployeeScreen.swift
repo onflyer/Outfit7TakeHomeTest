@@ -18,6 +18,10 @@ struct AddEmployeeScreen: View {
     @State private var age: Int = 18
     @State private var gender: Gender = .unknown
     
+    var isFormValid: Bool {
+        !name.isEmpty && !lastName.isEmpty
+    }
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -52,7 +56,7 @@ struct AddEmployeeScreen: View {
                         }
                         dismiss()
                     }
-                    .disabled(!viewModel.isFormValid)
+                    .disabled(!isFormValid)
                 }
             }
             .navigationBarTitleDisplayMode(.large)
