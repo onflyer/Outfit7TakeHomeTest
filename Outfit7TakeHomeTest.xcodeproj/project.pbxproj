@@ -11,6 +11,9 @@
 		300238CE2CE7451600CE16AC /* Collection + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238CD2CE7451600CE16AC /* Collection + Extension.swift */; };
 		300238D02CE7454300CE16AC /* Sequence + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238CF2CE7454300CE16AC /* Sequence + Extension.swift */; };
 		300238D22CE757EA00CE16AC /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238D12CE757EA00CE16AC /* Modal.swift */; };
+		300238D52CE7754700CE16AC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238D42CE7754700CE16AC /* EmptyView.swift */; };
+		300238D72CE777BD00CE16AC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238D62CE777BD00CE16AC /* LoadingView.swift */; };
+		300238D92CE777FA00CE16AC /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238D82CE777FA00CE16AC /* SuccessView.swift */; };
 		304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */; };
 		304837EB2CE2553400200EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837EA2CE2553400200EC6 /* Assets.xcassets */; };
 		304837EE2CE2553400200EC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837ED2CE2553400200EC6 /* Preview Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		300238CD2CE7451600CE16AC /* Collection + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection + Extension.swift"; sourceTree = "<group>"; };
 		300238CF2CE7454300CE16AC /* Sequence + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence + Extension.swift"; sourceTree = "<group>"; };
 		300238D12CE757EA00CE16AC /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
+		300238D42CE7754700CE16AC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		300238D62CE777BD00CE16AC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		300238D82CE777FA00CE16AC /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		304837E32CE2553400200EC6 /* Outfit7TakeHomeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outfit7TakeHomeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit7TakeHomeTestApp.swift; sourceTree = "<group>"; };
 		304837EA2CE2553400200EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +86,16 @@
 			isa = PBXGroup;
 			children = (
 				300238D12CE757EA00CE16AC /* Modal.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		300238D32CE7753200CE16AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				300238D42CE7754700CE16AC /* EmptyView.swift */,
+				300238D62CE777BD00CE16AC /* LoadingView.swift */,
+				300238D82CE777FA00CE16AC /* SuccessView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +222,7 @@
 		3099CDB82CE3581E00A84F61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				300238D32CE7753200CE16AC /* Views */,
 				300238C52CE5362400CE16AC /* EditScreen */,
 				3099CDC42CE4100C00A84F61 /* AddEmployeeScreen */,
 				3099CDC12CE3FB3400A84F61 /* DetailScreen */,
@@ -322,6 +339,7 @@
 				304837F92CE2580C00200EC6 /* LocalEmployeeDataSourceProtocol.swift in Sources */,
 				3099CDC02CE3591900A84F61 /* ViewState.swift in Sources */,
 				3099CDBD2CE3586C00A84F61 /* HomeScreen.swift in Sources */,
+				300238D72CE777BD00CE16AC /* LoadingView.swift in Sources */,
 				304837FB2CE25B1D00200EC6 /* CoreDataService.swift in Sources */,
 				300238D22CE757EA00CE16AC /* Modal.swift in Sources */,
 				3099CDA42CE25F4D00A84F61 /* EmployeeDomainModel.swift in Sources */,
@@ -338,6 +356,8 @@
 				3099CDA82CE265D500A84F61 /* LocalEmployeeDataSource.swift in Sources */,
 				3099CDAC2CE26C0000A84F61 /* CoreDataToDomain.swift in Sources */,
 				3099CDA62CE261DF00A84F61 /* GenderModel.swift in Sources */,
+				300238D92CE777FA00CE16AC /* SuccessView.swift in Sources */,
+				300238D52CE7754700CE16AC /* EmptyView.swift in Sources */,
 				3099CDB42CE2B82500A84F61 /* EmployeesLocalRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
