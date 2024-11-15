@@ -48,10 +48,8 @@ extension HomeScreen {
                 NavigationLink {
                     DetailScreen(employeeId: employee.id)
                 } label: {
-                    HStack {
-                        Text(employee.name)
-                        Text(employee.lastName)
-                    }
+                    listRowImage
+                    Text(fullName(name: employee.name, lastName: employee.lastName))
                 }
             }
             .onDelete(perform: { indexSet in
@@ -78,6 +76,24 @@ extension HomeScreen {
                 })
             }
         }
+    }
+    
+    var listRowImage: some View {
+        HStack(spacing: 15) {
+            Image(systemName: "person.circle")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .foregroundStyle(.gray)
+                .frame(width: 30, height: 30)
+        }
+    }
+    
+    func fullName(name: String, lastName: String) -> String {
+        let formatter = PersonNameComponentsFormatter()
+        var components = PersonNameComponents()
+        components.givenName = name
+        components.familyName = lastName
+        return formatter.string(from: components)
     }
 }
 
