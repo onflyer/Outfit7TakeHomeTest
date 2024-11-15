@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Modal: View {
-        
+    
     @Binding var isShowingStats: Bool
     
     let title: String = "Stats:"

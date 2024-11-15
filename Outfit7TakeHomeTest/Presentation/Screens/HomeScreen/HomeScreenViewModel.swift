@@ -101,9 +101,9 @@ extension HomeScreenViewModel {
         let maleCount = employees.filter({ $0.gender == .male }).count
         let femaleCount = employees.filter({ $0.gender == .female }).count
         
-        let malePercentage = Int(maleCount) / Int(employeeCount) * 100
-        let femalePercentage = Int(femaleCount) / Int(employeeCount) * 100
+        let malePercentage = (Double(maleCount) / Double(employeeCount)) * 100
+        let femalePercentage = (Double(femaleCount) / Double(employeeCount)) * 100
         
-        return String("Male to Female percentage is: \(malePercentage) to \(femalePercentage)%") 
+        return String("Male to female ratio: \(malePercentage) to \(femalePercentage)%")
     }
 }
