@@ -47,8 +47,7 @@ extension DetailScreen {
                     .foregroundStyle(.tertiary)
                     .padding(30)
                 HStack {
-                    Text(viewModel.name)
-                    Text(viewModel.lastName)
+                    Text(fullName(name: viewModel.name, lastName: viewModel.lastName))
                 }
                 .font(.largeTitle)
             }
@@ -79,6 +78,14 @@ extension DetailScreen {
                 isShowingEdit.toggle()
             }
         }
+    }
+    
+    func fullName(name: String, lastName: String) -> String {
+        let formatter = PersonNameComponentsFormatter()
+        var components = PersonNameComponents()
+        components.givenName = name
+        components.familyName = lastName
+        return formatter.string(from: components)
     }
 }
 
