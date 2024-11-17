@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class LocalEmployeeDataSource {
+class LocalEmployeeDataSource: LocalEmployeeDataSourceProtocol {
     
     private let coreDataService: CoreDataService
     
