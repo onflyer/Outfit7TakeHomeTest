@@ -22,7 +22,7 @@ final class AddEmployeeUITest: XCTestCase {
         app = nil
     }
     
-    func test_ListNavigationSelection() throws {
+    func testListNavigation() throws {
         
     }
 }
