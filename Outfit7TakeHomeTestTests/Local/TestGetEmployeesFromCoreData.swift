@@ -24,7 +24,7 @@ final class TestGetEmployeesFromCoreData: XCTestCase {
             XCTAssertTrue(employees.contains(where: { $0.id == fakeEmployee.id }))
             
         } catch {
-            XCTFail("Expected success, but got failure: \(error)")
+            XCTFail("Expected success, but got failure: \(error)") 
         }
         
         
