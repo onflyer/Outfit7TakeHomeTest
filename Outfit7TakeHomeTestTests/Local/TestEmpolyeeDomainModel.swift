@@ -13,7 +13,7 @@ final class TestEmployeeDomainModel: XCTestCase {
     func test_EmployeeDomainModel_canCreateAnInstance() {
         let instance = EmployeeDomainModel(id: UUID(), name: "testName", lastName: "testLastName", age: 30, gender: .male)
         
-        XCTAssertNotNil(instance)
+        XCTAssertNotNil(instance) 
     }
  
 }
