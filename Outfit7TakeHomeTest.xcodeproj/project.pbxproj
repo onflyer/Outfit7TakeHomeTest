@@ -17,6 +17,9 @@
 		300238F42CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238F32CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift */; };
 		300238F62CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238F52CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift */; };
 		300238FA2CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238F92CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift */; };
+		300239022CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300239012CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests.swift */; };
+		300239042CEA6D3600CE16AC /* Outfit7TakeHomeTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300239032CEA6D3600CE16AC /* Outfit7TakeHomeTestUITestsLaunchTests.swift */; };
+		3002390B2CEA6D8100CE16AC /* AddEmployeeUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002390A2CEA6D8100CE16AC /* AddEmployeeUITest.swift */; };
 		304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */; };
 		304837EB2CE2553400200EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837EA2CE2553400200EC6 /* Assets.xcassets */; };
 		304837EE2CE2553400200EC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837ED2CE2553400200EC6 /* Preview Assets.xcassets */; };
@@ -45,6 +48,13 @@
 			remoteGlobalIDString = 304837E22CE2553400200EC6;
 			remoteInfo = Outfit7TakeHomeTest;
 		};
+		300239052CEA6D3600CE16AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 304837DB2CE2553400200EC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 304837E22CE2553400200EC6;
+			remoteInfo = Outfit7TakeHomeTest;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +69,10 @@
 		300238F32CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEmpolyeeDomainModel.swift; sourceTree = "<group>"; };
 		300238F52CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAddEmployeeToCoreData.swift; sourceTree = "<group>"; };
 		300238F92CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGetEmployeesFromCoreData.swift; sourceTree = "<group>"; };
+		300238FF2CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Outfit7TakeHomeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		300239012CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit7TakeHomeTestUITests.swift; sourceTree = "<group>"; };
+		300239032CEA6D3600CE16AC /* Outfit7TakeHomeTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit7TakeHomeTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3002390A2CEA6D8100CE16AC /* AddEmployeeUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeUITest.swift; sourceTree = "<group>"; };
 		304837E32CE2553400200EC6 /* Outfit7TakeHomeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outfit7TakeHomeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit7TakeHomeTestApp.swift; sourceTree = "<group>"; };
 		304837EA2CE2553400200EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +96,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		300238E42CEA149F00CE16AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300238FC2CEA6D3600CE16AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -142,11 +163,22 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		300239002CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				300239012CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests.swift */,
+				300239032CEA6D3600CE16AC /* Outfit7TakeHomeTestUITestsLaunchTests.swift */,
+				3002390A2CEA6D8100CE16AC /* AddEmployeeUITest.swift */,
+			);
+			path = Outfit7TakeHomeTestUITests;
+			sourceTree = "<group>";
+		};
 		304837DA2CE2553400200EC6 = {
 			isa = PBXGroup;
 			children = (
 				304837E52CE2553400200EC6 /* Outfit7TakeHomeTest */,
 				300238E82CEA149F00CE16AC /* Outfit7TakeHomeTestTests */,
+				300239002CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests */,
 				304837E42CE2553400200EC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,6 +188,7 @@
 			children = (
 				304837E32CE2553400200EC6 /* Outfit7TakeHomeTest.app */,
 				300238E72CEA149F00CE16AC /* Outfit7TakeHomeTestTests.xctest */,
+				300238FF2CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,6 +364,24 @@
 			productReference = 300238E72CEA149F00CE16AC /* Outfit7TakeHomeTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		300238FE2CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 300239072CEA6D3600CE16AC /* Build configuration list for PBXNativeTarget "Outfit7TakeHomeTestUITests" */;
+			buildPhases = (
+				300238FB2CEA6D3600CE16AC /* Sources */,
+				300238FC2CEA6D3600CE16AC /* Frameworks */,
+				300238FD2CEA6D3600CE16AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				300239062CEA6D3600CE16AC /* PBXTargetDependency */,
+			);
+			name = Outfit7TakeHomeTestUITests;
+			productName = Outfit7TakeHomeTestUITests;
+			productReference = 300238FF2CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		304837E22CE2553400200EC6 /* Outfit7TakeHomeTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 304837F12CE2553500200EC6 /* Build configuration list for PBXNativeTarget "Outfit7TakeHomeTest" */;
@@ -362,6 +413,10 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 304837E22CE2553400200EC6;
 					};
+					300238FE2CEA6D3600CE16AC = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 304837E22CE2553400200EC6;
+					};
 					304837E22CE2553400200EC6 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -382,12 +437,20 @@
 			targets = (
 				304837E22CE2553400200EC6 /* Outfit7TakeHomeTest */,
 				300238E62CEA149F00CE16AC /* Outfit7TakeHomeTestTests */,
+				300238FE2CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		300238E52CEA149F00CE16AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300238FD2CEA6D3600CE16AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,6 +477,16 @@
 				300238F42CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift in Sources */,
 				300238F62CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift in Sources */,
 				300238FA2CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300238FB2CEA6D3600CE16AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				300239022CEA6D3600CE16AC /* Outfit7TakeHomeTestUITests.swift in Sources */,
+				300239042CEA6D3600CE16AC /* Outfit7TakeHomeTestUITestsLaunchTests.swift in Sources */,
+				3002390B2CEA6D8100CE16AC /* AddEmployeeUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +527,11 @@
 			target = 304837E22CE2553400200EC6 /* Outfit7TakeHomeTest */;
 			targetProxy = 300238EB2CEA149F00CE16AC /* PBXContainerItemProxy */;
 		};
+		300239062CEA6D3600CE16AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 304837E22CE2553400200EC6 /* Outfit7TakeHomeTest */;
+			targetProxy = 300239052CEA6D3600CE16AC /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -490,6 +568,40 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Outfit7TakeHomeTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Outfit7TakeHomeTest";
+			};
+			name = Release;
+		};
+		300239082CEA6D3600CE16AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FQWAP959Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = onflyer.com.Outfit7TakeHomeTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Outfit7TakeHomeTest;
+			};
+			name = Debug;
+		};
+		300239092CEA6D3600CE16AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FQWAP959Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = onflyer.com.Outfit7TakeHomeTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Outfit7TakeHomeTest;
 			};
 			name = Release;
 		};
@@ -678,6 +790,15 @@
 			buildConfigurations = (
 				300238EE2CEA149F00CE16AC /* Debug */,
 				300238EF2CEA149F00CE16AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		300239072CEA6D3600CE16AC /* Build configuration list for PBXNativeTarget "Outfit7TakeHomeTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300239082CEA6D3600CE16AC /* Debug */,
+				300239092CEA6D3600CE16AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
