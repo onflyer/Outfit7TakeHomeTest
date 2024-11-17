@@ -152,9 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				300238F32CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift */,
-				300238E92CEA149F00CE16AC /* CoreDataMockService.swift */,
 				300238F52CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift */,
 				300238F92CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift */,
+				300238E92CEA149F00CE16AC /* CoreDataMockService.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
