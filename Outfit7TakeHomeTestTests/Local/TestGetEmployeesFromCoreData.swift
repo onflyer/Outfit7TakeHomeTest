@@ -1,5 +1,5 @@
 //
-//  Outfit7HomeTestUnitTests.swift
+//  TestGetEmployeesFromCoreData.swift
 //  Outfit7TakeHomeTestTests
 //
 //  Created by Aleksandar Milidrag on 17. 11. 2024..
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Outfit7TakeHomeTest
 
-final class TestAddEmployeeToCoreData: XCTestCase {
+final class TestGetEmployeesFromCoreData: XCTestCase {
 
     func test_addEmployeeToCoreData() async {
         let service = CoreDataMockService()
@@ -19,8 +19,9 @@ final class TestAddEmployeeToCoreData: XCTestCase {
         try? await sut.addEmployee(employee: fakeEmployee)
         
         do {
-            let addedEmployee = try sut.getOneEmployee(id: fakeEmployee.id)
-            XCTAssertEqual(fakeEmployee.id, addedEmployee?.id)
+            let employees = try await sut.getEmployees()
+            XCTAssertEqual(employees.count, 1)
+            XCTAssertTrue(employees.contains(where: { $0.id == fakeEmployee.id }))
             
         } catch {
             XCTFail("Expected success, but got failure: \(error)")

@@ -16,6 +16,7 @@
 		300238EA2CEA149F00CE16AC /* CoreDataMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238E92CEA149F00CE16AC /* CoreDataMockService.swift */; };
 		300238F42CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238F32CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift */; };
 		300238F62CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238F52CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift */; };
+		300238FA2CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300238F92CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift */; };
 		304837E72CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */; };
 		304837EB2CE2553400200EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837EA2CE2553400200EC6 /* Assets.xcassets */; };
 		304837EE2CE2553400200EC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304837ED2CE2553400200EC6 /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		300238E92CEA149F00CE16AC /* CoreDataMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMockService.swift; sourceTree = "<group>"; };
 		300238F32CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEmpolyeeDomainModel.swift; sourceTree = "<group>"; };
 		300238F52CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAddEmployeeToCoreData.swift; sourceTree = "<group>"; };
+		300238F92CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGetEmployeesFromCoreData.swift; sourceTree = "<group>"; };
 		304837E32CE2553400200EC6 /* Outfit7TakeHomeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outfit7TakeHomeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304837E62CE2553400200EC6 /* Outfit7TakeHomeTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit7TakeHomeTestApp.swift; sourceTree = "<group>"; };
 		304837EA2CE2553400200EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,9 +134,10 @@
 		300238F02CEA14B900CE16AC /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				300238E92CEA149F00CE16AC /* CoreDataMockService.swift */,
 				300238F32CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift */,
+				300238E92CEA149F00CE16AC /* CoreDataMockService.swift */,
 				300238F52CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift */,
+				300238F92CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				300238EA2CEA149F00CE16AC /* CoreDataMockService.swift in Sources */,
 				300238F42CEA152A00CE16AC /* TestEmpolyeeDomainModel.swift in Sources */,
 				300238F62CEA192D00CE16AC /* TestAddEmployeeToCoreData.swift in Sources */,
+				300238FA2CEA1E1900CE16AC /* TestGetEmployeesFromCoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
