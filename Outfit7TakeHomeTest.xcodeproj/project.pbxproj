@@ -97,10 +97,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		300238DC2CEA10F800CE16AC /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
 		304837DA2CE2553400200EC6 = {
 			isa = PBXGroup;
 			children = (
 				304837E52CE2553400200EC6 /* Outfit7TakeHomeTest */,
+				300238DC2CEA10F800CE16AC /* UnitTests */,
 				304837E42CE2553400200EC6 /* Products */,
 			);
 			sourceTree = "<group>";
