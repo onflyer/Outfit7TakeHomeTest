@@ -13,19 +13,18 @@ class HomeScreenViewModel: ObservableObject {
     @Published var state: ViewState = .idle
     @Published var employees: [EmployeeDomainModel] = []
     @Published var searchedEmployees: [EmployeeDomainModel] = []
-    
-    let repository: EmployeesLocalRepository
-    
-    init(repository: EmployeesLocalRepository) {
-        self.repository = repository
-    }
-    
     @Published var employee: EmployeeDomainModel? = nil
     
     @Published var name: String = ""
     @Published var lastName: String = ""
     @Published var age: Int = 18
     @Published var gender: Gender = .unknown
+    
+    let repository: EmployeesLocalRepository
+    
+    init(repository: EmployeesLocalRepository) {
+        self.repository = repository
+    }
 }
 
 extension HomeScreenViewModel {
@@ -37,8 +36,7 @@ extension HomeScreenViewModel {
     func fetchEmployees() async {
         do {
             state = .loading
-            let result = try await repository.getEmployees()
-            employees = result
+            employees = try await repository.getEmployees()
             if employees.isEmpty {
                 state = .empty
             } else {

@@ -26,8 +26,5 @@ final class TestGetEmployeesFromCoreData: XCTestCase {
         } catch {
             XCTFail("Expected success, but got failure: \(error)") 
         }
-        
-        
     }
-
 }

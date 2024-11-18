@@ -9,13 +9,13 @@ import XCTest
 @testable import Outfit7TakeHomeTest
 
 final class TestAddEmployeeToCoreData: XCTestCase {
-
+    
     func test_addEmployeeToCoreData() async {
         let service = CoreDataMockService()
         let sut = LocalEmployeeDataSource(coreDataService: service)
         
         let fakeEmployee = EmployeeDomainModel(id: UUID(), name: "testName", lastName: "testLastName", age: 30, gender: .male)
-                
+        
         try? await sut.addEmployee(employee: fakeEmployee)
         
         do {
@@ -25,8 +25,5 @@ final class TestAddEmployeeToCoreData: XCTestCase {
         } catch {
             XCTFail("Expected success, but got failure: \(error)")
         }
-        
-        
     }
-
 }
