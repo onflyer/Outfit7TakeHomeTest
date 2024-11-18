@@ -10,7 +10,7 @@ import XCTest
 
 final class TestGetEmployeesFromCoreData: XCTestCase {
 
-    func test_addEmployeeToCoreData() async {
+    func test_getEmployees() async {
         let service = CoreDataMockService()
         let sut = LocalEmployeeDataSource(coreDataService: service)
         
