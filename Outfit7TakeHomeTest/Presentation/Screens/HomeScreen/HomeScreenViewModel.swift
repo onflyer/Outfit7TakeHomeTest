@@ -12,6 +12,7 @@ class HomeScreenViewModel: ObservableObject {
     
     @Published var state: ViewState = .idle
     @Published var employees: [EmployeeDomainModel] = []
+    @Published var searchedEmployees: [EmployeeDomainModel] = []
     
     let repository: EmployeesLocalRepository
     
