@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-class HomeScreenViewModel: ObservableObject {
+class EmployeeLocalRepository: ObservableObject {
     
     @Published var state: ViewState = .idle
     @Published var employees: [EmployeeDomainModel] = []
@@ -27,7 +27,7 @@ class HomeScreenViewModel: ObservableObject {
     }
 }
 
-extension HomeScreenViewModel {
+extension EmployeeLocalRepository {
     
     var isFormValid: Bool {
         !name.isEmpty && !lastName.isEmpty
