@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailScreen: View {
     
-    @EnvironmentObject var viewModel: EmployeeLocalRepository
+    @EnvironmentObject var viewModel: EmployeesRepository
     @State private var isShowingEdit: Bool = false
     
     let employeeId: UUID
@@ -91,5 +91,5 @@ extension DetailScreen {
 
 #Preview {
     DetailScreen(employeeId: UUID())
-        .environmentObject(EmployeeLocalRepository(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
+        .environmentObject(EmployeesRepository(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
 }

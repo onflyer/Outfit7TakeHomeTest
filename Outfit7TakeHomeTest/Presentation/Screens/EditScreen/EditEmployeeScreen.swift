@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditEmployeeScreen: View {
     
-    @EnvironmentObject var viewModel: EmployeeLocalRepository
+    @EnvironmentObject var viewModel: EmployeesRepository
     @Environment (\.dismiss) private var dismiss
     
     let id: UUID
@@ -90,6 +90,6 @@ extension EditEmployeeScreen {
 
 #Preview {
     EditEmployeeScreen(id: UUID())
-        .environmentObject(EmployeeLocalRepository(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
+        .environmentObject(EmployeesRepository(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
     
 }

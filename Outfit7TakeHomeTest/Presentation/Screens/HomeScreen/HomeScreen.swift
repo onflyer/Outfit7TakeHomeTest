@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    @EnvironmentObject var viewModel : EmployeeLocalRepository
+    @EnvironmentObject var viewModel : EmployeesRepository
     
     @State private var isShowingSheet: Bool = false
     @State private var isShovingStats: Bool = false
@@ -133,5 +133,5 @@ extension HomeScreen {
 
 #Preview {
     HomeScreen()
-        .environmentObject(EmployeeLocalRepository(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
+        .environmentObject(EmployeesRepository(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource(coreDataService: CoreDataService()))))
 }

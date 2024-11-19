@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Outfit7TakeHomeTestApp: App {
     
-    @StateObject var repository = EmployeeLocalRepository(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource (coreDataService: CoreDataService())))
+    @StateObject var repository = EmployeesRepository(repository: EmployeesLocalRepository(dataSource: LocalEmployeeDataSource (coreDataService: CoreDataService())))
     
     var body: some Scene {
         WindowGroup {
